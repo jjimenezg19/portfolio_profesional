@@ -18,7 +18,7 @@ export const content = {
     },
     banner: {
       titleOne: "Hi, I'm",
-      titleTwo: "Web Developer",
+      titleTwo: "Full-Stack Developer",
       subtitleOne: "Lover of",
       subtitleTwo: "programming, animations and motorcycles",
       aboutMe:
