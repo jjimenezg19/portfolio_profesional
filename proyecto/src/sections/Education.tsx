@@ -1,6 +1,6 @@
 // src/sections/Education.tsx
 import Title from "@/components/Title";
-import Timeline from "@/components/Timeline";
+import Timeline from "@/components/TimeLine";
 
 type EducationItem = {
   time: string;

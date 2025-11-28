@@ -5,7 +5,6 @@ type HeroContent = {
   titleOne: string;
   titleTwo: string;
   subtitleOne: string;
-  subtitleTwo: string;
 };
 
 type HeroProps = {

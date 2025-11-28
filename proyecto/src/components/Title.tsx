@@ -1,4 +1,9 @@
-export default function Title({ text, className }) {
+type TitleProps = {
+  text: string;
+  className?: string;
+};
+
+export default function Title({ text, className = "" }: TitleProps) {
   className = className ?? "";
 
   return (

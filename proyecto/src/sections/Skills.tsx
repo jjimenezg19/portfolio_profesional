@@ -11,7 +11,6 @@ gsap.registerPlugin(ScrollTrigger);
 type SkillsContent = {
   title: string;
   subtitle: string;
-  indication: string;
 };
 
 type SkillsProps = {

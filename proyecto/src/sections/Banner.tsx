@@ -9,7 +9,6 @@ type BannerContent = {
   titleOne: string;
   titleTwo: string;
   subtitleOne: string;
-  subtitleTwo: string;
   aboutMe: string;
 };
 
