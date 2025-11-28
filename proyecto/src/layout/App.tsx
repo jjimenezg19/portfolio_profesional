@@ -23,7 +23,7 @@ export default function App() {
   useEffect(() => {
     const handleScroll = () => {
       // puedes ajustar el 400 si quieres que aparezca antes o después
-      setShowScrollTop(window.scrollY > 400);
+      setShowScrollTop(window.scrollY > 600);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -34,7 +34,7 @@ export default function App() {
 
   // Acción al hacer click en el botón
   const handleScrollTop = () => {
-    const main = document.getElementById("main");
+    const main = document.getElementById("about-me");
 
     if (main) {
       // si quieres que suba el contenedor principal
