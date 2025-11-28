@@ -1,0 +1,328 @@
+/* ---------------------- */
+/* 1. Tailwind + tokens   */
+/* ---------------------- */
+
+@import "tailwindcss";
+@import "@/assets/styles/social-network.css";
+
+/* Design tokens: 60-30-10 */
+@theme {
+  --color-primary: #232931; /* 60% */
+  --color-secondary: #72d3b4; /* 30% */
+  --color-accent: #8a00c4; /* 10% */
+
+  --color-primary-600: #1d232a;
+  --color-primary-400: #2b323b;
+  --color-secondary-600: #56bea2;
+  --color-secondary-400: #8bdbc1;
+  --color-accent-600: #70009e;
+  --color-accent-400: #a43ad2;
+
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-800: #1a1a1a;
+}
+
+/* ---------------------- */
+/* 2. Base layer          */
+/* ---------------------- */
+
+@layer base {
+  html,
+  body,
+  #root {
+    @apply w-full h-full;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    scrollbar-gutter: stable both-edges;
+    @apply box-border overflow-x-hidden text-[var(--color-neutral-100)];
+    background-color: var(--color-primary);
+  }
+
+  :root {
+    --font-display: "Druk", system-ui, sans-serif;
+  }
+  body {
+    font-family: var(--font-display);
+  }
+}
+
+/* ---------------------- */
+/* 3. Components layer    */
+/* ---------------------- */
+
+@layer components {
+  /* ---- Inputs reutilizables ---- */
+  .h-input,
+  .h-textarea {
+    @apply text-sm md:text-base outline-none border-2 rounded-lg w-full transition px-3 py-2;
+    @apply bg-[color-mix(in_hsl,var(--color-primary-400)_60%,black_40%)];
+    @apply border-[var(--color-primary-400)];
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  textarea:focus {
+    box-shadow: none;
+  }
+
+  /* ---- Logo (antes en App.css) ---- */
+  .logo {
+    @apply h-24 p-6 transition duration-300;
+  }
+
+  .logo:hover {
+    filter: drop-shadow(0 0 2em var(--color-secondary));
+  }
+
+  /* ---- Toggle de tema (antes en theme-toggle.css) ---- */
+  .theme-toggle-wrap {
+    @apply shrink-0 w-10 md:w-12 h-6 md:h-7 relative flex items-center rounded-[1.25rem] transition duration-200;
+    @apply bg-[#72d3b4];
+  }
+
+  .theme-toggle-wrap:has(input:checked) {
+    @apply bg-[#8a00c4];
+  }
+
+  .theme-toggle-thumb {
+    @apply flex justify-end transition-all duration-200 ease-linear;
+  }
+
+  .theme-toggle-wrap:has(input:not(:checked)) .theme-toggle-thumb {
+    @apply w-6 md:w-7;
+  }
+
+  .theme-toggle-wrap:has(input:checked) .theme-toggle-thumb {
+    @apply w-9 md:w-11;
+  }
+
+  .theme-toggle-thumb i {
+    @apply size-5 md:size-6 flex justify-center items-center text-xs md:text-sm rounded-full transition duration-200;
+    @apply bg-[#ffffff] text-[#000];
+  }
+
+  .theme-toggle-wrap:has(input:checked) .theme-toggle-thumb i {
+    @apply bg-[#1f1f1f] text-white;
+  }
+
+  .theme-toggle-wrap:has(input:not(:checked)) .theme-toggle-thumb i.fa-moon {
+    transform: rotateZ(-90deg);
+  }
+
+  .theme-toggle-wrap:has(input:checked) .theme-toggle-thumb i.fa-sun {
+    transform: rotateZ(90deg);
+  }
+
+  .theme-toggle-wrap:has(input:not(:checked)) .theme-toggle-thumb i.fa-moon,
+  .theme-toggle-wrap:has(input:checked) .theme-toggle-thumb i.fa-sun {
+    @apply opacity-0 w-0;
+  }
+
+  .theme-toggle-wrap:has(input:not(:checked)) .theme-toggle-thumb i.fa-sun,
+  .theme-toggle-wrap:has(input:checked) .theme-toggle-thumb i.fa-moon {
+    @apply opacity-100;
+  }
+
+  .theme-toggle-wrap input {
+    @apply hidden;
+  }
+}
+
+/* ---------------------- */
+/* 4. Utilities layer     */
+/* ---------------------- */
+
+@layer utilities {
+  /* Scrollbars */
+  *::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  *::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    @apply rounded-lg;
+    background-color: var(--color-secondary-600);
+  }
+
+  /* Header blur on scroll */
+  #header {
+    animation: blur linear both;
+    animation-timeline: scroll();
+    animation-range: 0 500px;
+  }
+
+  .timeline-visible {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+  .timeline article:first-child div:nth-child(2) div:nth-child(1) {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .timeline article:last-child div:nth-child(2) div:nth-child(1) {
+    border-radius: 0 0 10px 10px;
+  }
+
+  .accordion-cards:has(article:hover) article:not(:hover) {
+    filter: grayscale(1);
+  }
+
+  .navigation-path {
+    fill: var(--secondary200);
+  }
+
+  .johan-path {
+    fill: var(--primary300);
+  }
+
+  .nav-option-active i:hover {
+    animation: shake 0.5s 0.2s;
+  }
+
+  .scaled-explosion {
+    animation: scaled-explosion 0.7s ease-out;
+  }
+
+  .goToTopButton,
+  .goToTopButton p {
+    transition: 0.2s;
+  }
+
+  .blink_cursor {
+    animation: blink_cursor 1s steps(1) infinite;
+  }
+
+  #skills {
+    background: linear-gradient(
+      135deg,
+      var(--ternary100, #595e70) 0%,
+      var(--ternary400, #2e3038) 50%
+    );
+  }
+
+  #ideals {
+    background: linear-gradient(
+      315deg,
+      var(--ternary100, #595e70) 0%,
+      var(--ternary400, #2e3038) 50%
+    );
+  }
+
+  .Toastify__toast {
+    background-color: var(--ternary200, #494d5b);
+    color: var(--neutral100, #f2f2f2);
+  }
+
+  .Toastify__close-button {
+    color: var(--neutral100, #f2f2f2) !important;
+  }
+
+  /* Animaciones */
+  @keyframes blink_cursor {
+    0% {
+      color: var(--color-neutral-100);
+    }
+    50% {
+      color: var(--color-primary-600);
+    }
+    100% {
+      color: var(--color-neutral-100);
+    }
+  }
+
+  @keyframes blur {
+    to {
+      background: color-mix(in hsl, var(--color-primary) 30%, transparent);
+      backdrop-filter: blur(10px);
+    }
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translateX(-6px);
+    }
+    25% {
+      transform: translateX(6px);
+    }
+    50% {
+      transform: translateX(-3px);
+    }
+    75% {
+      transform: translateX(3px);
+    }
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(-8px);
+    }
+    25% {
+      transform: translateY(8px);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+    75% {
+      transform: translateY(3px);
+    }
+  }
+
+  @keyframes scaled-explosion {
+    30% {
+      transform: scale(1.3);
+    }
+    60% {
+      transform: scale(0.7);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+/* ---- Efectos Neon ---- */
+@layer components {
+  .neon-title {
+    font-family: var(--font-display);
+    font-size: 3rem; /* Ajusta para tamaño grande, luego en media queries */
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--color-secondary); /* color30 de tu paleta */
+    text-shadow: 0 0 4px rgba(var(--color-secondary-rgb, 114, 211, 180), 0.8),
+      0 0 8px rgba(var(--color-secondary-rgb, 114, 211, 180), 0.7),
+      0 0 12px rgba(var(--color-secondary-rgb, 114, 211, 180), 0.6);
+    transition: color 200ms ease, text-shadow 200ms ease;
+  }
+
+  .neon-title:hover {
+    color: var(--color-accent); /* color10 de tu paleta */
+    text-shadow: 0 0 6px rgba(var(--color-accent-rgb, 138, 0, 196), 1),
+      0 0 14px rgba(var(--color-accent-rgb, 138, 0, 196), 0.9),
+      0 0 24px rgba(var(--color-accent-rgb, 138, 0, 196), 0.8),
+      0 0 34px rgba(var(--color-accent-rgb, 138, 0, 196), 0.7);
+    /* eliminar transform (no mover) */
+  }
+
+  /* Media queries para tamaño grande */
+  @screen md {
+    .neon-title {
+      font-size: 4rem;
+    }
+  }
+  @screen lg {
+    .neon-title {
+      font-size: 5.5rem;
+    }
+  }
+}

@@ -10,12 +10,21 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0",
+    "@lottiefiles/lottie-player": "^2.0.12",
+    "@lottiefiles/react-lottie-player": "^3.6.0",
+    "axios": "^1.13.2",
+    "gsap": "^3.13.0",
+    "lottie-react": "^2.4.1",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "react-toastify": "^11.0.5",
+    "zustand": "^5.0.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
     "@tailwindcss/postcss": "^4.1.14",
+    "@types/gsap": "^1.20.2",
     "@types/node": "^24.6.0",
     "@types/react": "^19.1.16",
     "@types/react-dom": "^19.1.9",

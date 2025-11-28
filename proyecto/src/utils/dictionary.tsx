@@ -1,11 +1,7 @@
-// i18n content dictionary for Johan's portfolio
-// Tailored to Tailwind v4 tokens: primary / secondary / accent (60/30/10)
-// You can import and use as: import { content } from "@/utils/dictionary";
-
 export const content = {
-  EN: {
+  En: {
     header: {
-      cvButton: "Download résumé",
+      cvButton: "Download resume",
     },
     navigation: {
       aboutMe: "About me",
@@ -17,82 +13,84 @@ export const content = {
       contact: "Contact",
     },
     banner: {
-      titleOne: "Hi, I'm",
+      titleOne: "Hello, I'm",
       titleTwo: "Full-Stack Developer",
-      subtitleOne: "Lover of",
-      subtitleTwo: "programming, animations and motorcycles",
+      subtitleOne:
+        "I build software, chase horizons, and stay grounded through yoga",
+
       aboutMe:
-        "Frontend-focused developer skilled in React, TypeScript and Tailwind. I enjoy building responsive, accessible UIs and tasteful micro‑interactions, applying UI/UX best practices for clarity and speed.",
+        "I am bilingual in Spanish and English, with a solid background in C#, Java, JavaScript, and modern frameworks such as React. Passionate about writing clean, scalable, and maintainable code.",
     },
-    projects: [
-      {
-        // Example project — replace with your actual items when ready
-        gallery: ["portfolio-1", "portfolio-2", "portfolio-3"],
-        title: "Portfolio Web",
-        subtitle: "Personal project",
-        description:
-          "Modern personal portfolio showcasing projects, skills, and experience. Built with React, TypeScript, Vite, and Tailwind with a11y and performance in mind.",
-        technologies: [
-          { name: "React", logo: "react" },
-          { name: "TypeScript", logo: "typescript" },
-          { name: "Tailwind", logo: "tailwind" },
-          { name: "Vite", logo: "vite" },
-        ],
-        links: [
-          {
-            text: "Live site",
-            icon: "fas fa-external-link-alt",
-            url: "https://jjimenezg19.github.io/johan_portafolio/",
-          },
-          // { text: "GitHub", icon: "fab fa-github", url: "https://github.com/jjimenezg19/johan_portafolio" },
-        ],
-      },
-      {
-        gallery: ["lts-1", "lts-2", "lts-3", "lts-4", "lts-5"],
-        title: "Latino Transit Solutions",
-        subtitle: "University project",
-        description:
-          "Package shipment management platform to register transports, define routes, approve routes, attach shipments to transports, and track delivery status.",
-        technologies: [
-          { name: "React", logo: "react" },
-          { name: "Tailwind", logo: "tailwind" },
-          { name: "Node.js", logo: "nodejs" },
-          { name: "TypeScript", logo: "typescript" },
-        ],
-        links: [
-          {
-            text: "Visit GitHub",
-            icon: "fab fa-github",
-            url: "https://github.com/haroldcdb/LatinoTransitSolutions",
-          },
-        ],
-      },
-      {
-        gallery: ["dsv-1", "dsv-2", "dsv-3", "dsv-4", "dsv-5"],
-        title: "Design System for Vue",
-        subtitle: "Personal project",
-        description:
-          "Component library for Vue ranging from basic form elements to advanced widgets like charts, image uploader, and calendar.",
-        technologies: [
-          { name: "Vue", logo: "vue" },
-          { name: "JavaScript", logo: "javascript" },
-          { name: "CSS", logo: "css" },
-          { name: "GSAP", logo: "gsap" },
-        ],
-        links: [
-          {
-            text: "Visit GitHub",
-            icon: "fab fa-github",
-            url: "https://github.com/haroldcdb/vue-framework",
-          },
-        ],
-      },
-    ],
+    projects: {
+      title: "Projects",
+      content: [
+        {
+          gallery: ["GA1", "GA2", "GA3", "GA4", "GA5", "GA6", "GA7"],
+          title: "Gym Management System",
+          subtitle: "University project",
+          description:
+            "An integral management system for fitness centers that optimizes business administration and client interaction. It manages users and roles, custom workout routines, appointment scheduling, access to group classes, and payment processing, with flexible options for different membership types.",
+          technologies: [
+            { name: "ASP.NET Core", logo: "dot-net" },
+            { name: "C#", logo: "c--4" },
+            { name: "JavaScript", logo: "javascript" },
+            { name: "Node.js", logo: "nodejs" },
+          ],
+          links: [
+            {
+              text: "View on GitHub",
+              icon: "fas fa-external-link-alt",
+              url: "https://github.com/jjimenezg19/GymApp",
+            },
+          ],
+        },
+        {
+          gallery: ["JA1", "JA2", "JA3", "JA4", "JA5", "JA6"],
+          title: "Latino Transit Solutions",
+          subtitle: "University project",
+          description:
+            "A shipment management platform that optimizes package delivery logistics through an integrated solution. It handles transport registration, route assignment and approval, and connects shipments with specific transports for better tracking and control.",
+          technologies: [
+            { name: "React", logo: "react" },
+            { name: "Tailwind", logo: "tailwind" },
+            { name: "Node.js", logo: "nodejs" },
+            { name: "TypeScript", logo: "typescript" },
+          ],
+          links: [
+            {
+              text: "View on GitHub",
+              icon: "fab fa-github",
+              url: "https://github.com/jjimenezg19/LatinoTransitSolutions",
+            },
+          ],
+        },
+        {
+          gallery: ["TS1", "TS2", "TS3", "TS4", "TS5"],
+          title: "Educational Seeker Platform",
+          subtitle: "University project",
+          description:
+            "A web application that centralizes key information from different schools to help parents make informed decisions. It allows comparing institutions by academic programs, extracurricular activities, tuition, and performance indicators.",
+          technologies: [
+            { name: "JavaScript", logo: "javascript" },
+            { name: "CSS", logo: "css" },
+            { name: "HTML", logo: "html" },
+            { name: "MongoDB", logo: "mongodb" },
+          ],
+          links: [
+            {
+              text: "View on GitHub",
+              icon: "fab fa-github",
+              url: "https://github.com/jjimenezg19/Educational_Seeker",
+            },
+          ],
+        },
+      ],
+    },
+
     skills: {
       title: "Skills",
       subtitle:
-        "Technologies and tools I use the most as a frontend developer (and a bit of backend).",
-      indication: "Grab and swipe left",
+        "Technologies and tools I have worked with as a full-stack developer include:",
     },
     ideals: {
       title: "Ideals",
@@ -101,9 +99,11 @@ export const content = {
           title: "Mission",
           text: (
             <p className="text-balance">
-              Contribute my skills to help teams ship reliable, accessible
-              interfaces — leaving big results through small, consistent
-              improvements across projects.
+              Develop modern, functional, and high-quality full-stack
+              applications that provide efficient solutions to real-world
+              problems, applying best programming practices with a user-centered
+              approach to create intuitive, useful, and sustainable digital
+              experiences.
             </p>
           ),
         },
@@ -111,9 +111,10 @@ export const content = {
           title: "Vision",
           text: (
             <p className="text-balance">
-              Grow into a standout web engineer at a leading tech company,
-              continuously learning and mentoring while delivering high‑impact
-              products.
+              To be a developer recognized for creating software with purpose —
+              positively impacting society by building innovative, inclusive,
+              and sustainable digital solutions that transform ideas into
+              meaningful improvements in people’s lives.
             </p>
           ),
         },
@@ -121,14 +122,21 @@ export const content = {
           title: "Values",
           text: (
             <p className="text-balance">
-              I value <span className="text-accent font-bold">solidarity</span>{" "}
-              in helping others,
-              <span className="text-accent font-bold"> respect</span> for
-              colleagues’ ideas,
-              <span className="text-accent font-bold"> honesty</span> with
-              strong work ethics, and
-              <span className="text-accent font-bold"> gratitude</span> for
-              every learning opportunity.
+              I value{" "}
+              <span className="text-accent font-bold">Responsibility</span> I
+              honor commitments and deliver quality results on time, which
+              strengthens trust with the teams and organizations I collaborate
+              with.
+              <span className="text-accent font-bold"> Loyalty</span> I act with
+              integrity and sound judgment in any situation to build long-term
+              professional relationships.
+              <span className="text-accent font-bold">
+                {" "}
+                Proactivity and Ingenuity
+              </span>{" "}
+              I stand out for finding creative solutions even in complex
+              scenarios or with limited resources, always looking for the best
+              way to add value.
             </p>
           ),
         },
@@ -138,16 +146,22 @@ export const content = {
       title: "Experience",
       content: [
         {
-          time: "2021 — Present",
-          title: "Full‑stack Web Developer",
-          subtitle: "Reboot CR — 4thewords.com",
-          text: "Maintained and evolved a large commercial web app: resolved technical debt, delivered new features from widgets to full pages, and fixed bugs across legacy and modern areas. Worked across frontend and backend with some DevOps involvement.",
+          time: "May 2024 – Sep 2024",
+          title: "Full-Stack Developer",
+          subtitle: "FitStream Solutions",
+          text: "Fictitious company created for the Project 2 course, where we designed and developed a web application for fitness center management. The system supports business administration and client interaction. The project included a detailed requirements phase and formal documentation with use cases, simulating a real-world work environment.",
         },
         {
-          time: "2018",
-          title: "Full‑stack Web Developer",
-          subtitle: "Cubik — LimOn (University project)",
-          text: "Designed and developed a web app for hotel/tourist site listings and reservations. Captured requirements and produced formal documentation with use cases, mirroring a real‑world team environment.",
+          time: "Apr 2024 – Present",
+          title: "Full-Stack Developer",
+          subtitle: "Freelancer",
+          text: "As a freelancer, I’ve strengthened my ability to work with tight deadlines while communicating clearly with clients. This role allows me to explore different ideas and learn from each project, watching how creative concepts turn into real, working solutions.",
+        },
+        {
+          time: "Jan 2019 – May 2019",
+          title: "Full-Stack Web Developer",
+          subtitle: "JAMS Project",
+          text: "Fictitious company created for the Project 1 course, where we designed and developed a web application called Educational Seeker. The platform helps parents decide between academic options for their children. The project simulated a real-world environment with requirements gathering, formal documentation, and system diagrams.",
         },
       ],
     },
@@ -155,24 +169,27 @@ export const content = {
       title: "Education",
       content: [
         {
-          time: "2021 — Present",
-          title: "Bachelor’s degree in Software Engineering",
-          subtitle: "Cenfotec University",
+          time: "2020 — 2024",
+          title: "Associate's Degree in Software Development",
+          subtitle: "Universidad Cenfotec",
+          text: "Cenfotec University provided me with a strong foundation in software development and ignited my passion for solving complex problems through code.",
         },
         {
           time: "2024 — Present",
-          title: "Intensive English Course",
-          subtitle: "Fundatec — TEC",
+          title: "Bachelor's Degree in Software Development",
+          subtitle: "Universidad Cenfotec",
+          text: "This program is helping me deepen my understanding of software architecture, design patterns, and real-world problem-solving.",
         },
         {
-          time: "2018 — 2019",
-          title: "Software Engineering Technical Degree",
-          subtitle: "Cenfotec University",
+          time: "2025 — Present",
+          title: "English as a Second Language — Intensive Course",
+          subtitle: "SKYCTC",
+          text: "This intensive ESL course is enhancing my proficiency in English, focusing on advanced grammar, vocabulary, and conversational skills to support my professional growth in the tech industry.",
         },
       ],
     },
     contact: {
-      title: "Contact me",
+      title: "Get in Touch",
       subtitle:
         "Feel free to reach out using the form below — I’ll get back to you as soon as possible.",
       email: "Email",
@@ -181,11 +198,11 @@ export const content = {
       button: "Submit",
     },
     footer: {
-      slogan: "Clear vision, clear coding",
+      slogan: "Copyright 2025. All Rights Reserved Johan Jimenez",
     },
   },
 
-  ES: {
+  Es: {
     header: {
       cvButton: "Descargar CV",
     },
@@ -200,80 +217,81 @@ export const content = {
     },
     banner: {
       titleOne: "Hola, soy",
-      titleTwo: "Desarrollador Web",
-      subtitleOne: "Amante de",
-      subtitleTwo: "la programación, las animaciones y las motocicletas",
+      titleTwo: "Desarrollador Full-Stack",
+      subtitleOne:
+        "Creo software, persigo nuevos horizontes y mantengo los pies en la tierra gracias al yoga.",
       aboutMe:
-        "Desarrollador enfocado en frontend con experiencia en React, TypeScript y Tailwind. Me gusta crear interfaces responsivas y accesibles con micro‑interacciones, aplicando buenas prácticas de UI/UX.",
+        "Soy bilingüe en español e inglés, con sólida formación en C#, Java, JavaScript y frameworks modernos como React. Apasionado por escribir código limpio, escalable y fácil de mantener.",
     },
-    projects: [
-      {
-        gallery: ["portfolio-1", "portfolio-2", "portfolio-3"],
-        title: "Portfolio Web",
-        subtitle: "Proyecto personal",
-        description:
-          "Portafolio moderno para mostrar proyectos, habilidades y experiencia. Construido con React, TypeScript, Vite y Tailwind, optimizado para accesibilidad y rendimiento.",
-        technologies: [
-          { name: "React", logo: "react" },
-          { name: "TypeScript", logo: "typescript" },
-          { name: "Tailwind", logo: "tailwind" },
-          { name: "Vite", logo: "vite" },
-        ],
-        links: [
-          {
-            text: "Sitio en vivo",
-            icon: "fas fa-external-link-alt",
-            url: "https://jjimenezg19.github.io/johan_portafolio/",
-          },
-          // { text: "GitHub", icon: "fab fa-github", url: "https://github.com/jjimenezg19/johan_portafolio" },
-        ],
-      },
-      {
-        gallery: ["lts-1", "lts-2", "lts-3", "lts-4", "lts-5"],
-        title: "Latino Transit Solutions",
-        subtitle: "Proyecto universitario",
-        description:
-          "Plataforma de gestión de envíos: registro de transportes, definición y aprobación de rutas, asociación de envíos a transportes y seguimiento del estado.",
-        technologies: [
-          { name: "React", logo: "react" },
-          { name: "Tailwind", logo: "tailwind" },
-          { name: "Node.js", logo: "nodejs" },
-          { name: "TypeScript", logo: "typescript" },
-        ],
-        links: [
-          {
-            text: "Visitar GitHub",
-            icon: "fab fa-github",
-            url: "https://github.com/haroldcdb/LatinoTransitSolutions",
-          },
-        ],
-      },
-      {
-        gallery: ["dsv-1", "dsv-2", "dsv-3", "dsv-4", "dsv-5"],
-        title: "Design System para Vue",
-        subtitle: "Proyecto personal",
-        description:
-          "Librería de componentes para Vue: desde controles de formulario hasta componentes avanzados como gráficos, cargador de imágenes y calendario.",
-        technologies: [
-          { name: "Vue", logo: "vue" },
-          { name: "JavaScript", logo: "javascript" },
-          { name: "CSS", logo: "css" },
-          { name: "GSAP", logo: "gsap" },
-        ],
-        links: [
-          {
-            text: "Visitar GitHub",
-            icon: "fab fa-github",
-            url: "https://github.com/haroldcdb/vue-framework",
-          },
-        ],
-      },
-    ],
+    projects: {
+      title: "Proyectos",
+      content: [
+        {
+          gallery: ["GA1", "GA2", "GA3", "GA4", "GA5", "GA6", "GA7"],
+          title: "Sistema de Gestión para Gimnasios",
+          subtitle: "Proyecto universitario",
+          description:
+            "Sistema de gestión integral para centros de acondicionamiento físico que optimiza la administración del negocio y la interacción con los clientes. Permite gestionar usuarios y roles, rutinas personalizadas, citas, clases grupales y pagos, con opciones flexibles para distintos tipos de membresía.",
+          technologies: [
+            { name: "ASP.NET Core", logo: "dot-net" },
+            { name: "C#", logo: "c--4" },
+            { name: "JavaScript", logo: "javascript" },
+            { name: "Node.js", logo: "nodejs" },
+          ],
+          links: [
+            {
+              text: "Ver en GitHub",
+              icon: "fas fa-external-link-alt",
+              url: "https://github.com/jjimenezg19/GymApp",
+            },
+          ],
+        },
+        {
+          gallery: ["JA1", "JA2", "JA3", "JA4", "JA5", "JA6"],
+          title: "Latino Transit Solutions",
+          subtitle: "Proyecto universitario",
+          description:
+            "Plataforma de gestión de envíos que optimiza la logística de entrega de paquetes mediante el registro de transportes, asignación y aprobación de rutas, y asociación de envíos con transportes específicos para un mejor control y trazabilidad.",
+          technologies: [
+            { name: "React", logo: "react" },
+            { name: "Tailwind", logo: "tailwind" },
+            { name: "Node.js", logo: "nodejs" },
+            { name: "TypeScript", logo: "typescript" },
+          ],
+          links: [
+            {
+              text: "Visitar GitHub",
+              icon: "fab fa-github",
+              url: "https://github.com/jjimenezg19/LatinoTransitSolutions",
+            },
+          ],
+        },
+        {
+          gallery: ["TS1", "TS2", "TS3", "TS4", "TS5"],
+          title: "Plataforma Educational Seeker",
+          subtitle: "Proyecto universitario",
+          description:
+            "Aplicación web que centraliza información clave de diferentes instituciones educativas para ayudar a padres y estudiantes a tomar decisiones informadas. Permite comparar centros educativos según programas académicos, actividades extracurriculares, colegiaturas y rendimiento estudiantil.",
+          technologies: [
+            { name: "JavaScript", logo: "javascript" },
+            { name: "CSS", logo: "css" },
+            { name: "HTML", logo: "html" },
+            { name: "MongoDB", logo: "mongodb" },
+          ],
+          links: [
+            {
+              text: "Visitar GitHub",
+              icon: "fab fa-github",
+              url: "https://github.com/jjimenezg19/Educational_Seeker",
+            },
+          ],
+        },
+      ],
+    },
     skills: {
       title: "Habilidades",
       subtitle:
-        "Tecnologías y herramientas que más utilizo como desarrollador frontend (y un poco de backend).",
-      indication: "Clic y desliza a la izquierda",
+        "Tecnologías y herramientas con las que he trabajado como desarrollador Full-Stack.",
     },
     ideals: {
       title: "Ideales",
@@ -282,9 +300,11 @@ export const content = {
           title: "Misión",
           text: (
             <p className="text-balance">
-              Aportar mis habilidades para ayudar a los equipos a entregar
-              interfaces fiables y accesibles, logrando grandes resultados
-              mediante mejoras constantes y enfocadas.
+              Desarrollar aplicaciones tecnológicas Full-Stack modernas,
+              funcionales y de alta calidad que brinden soluciones eficientes a
+              problemas reales, aplicando buenas prácticas de programación con
+              un enfoque centrado en el usuario para crear experiencias
+              digitales intuitivas, útiles y sostenibles.
             </p>
           ),
         },
@@ -292,9 +312,11 @@ export const content = {
           title: "Visión",
           text: (
             <p className="text-balance">
-              Crecer como ingeniero web destacado en una empresa líder,
-              aprendiendo y guiando a otros mientras entrego productos de alto
-              impacto.
+              Ser un desarrollador reconocido por crear software con propósito,
+              impactando positivamente a la sociedad mediante soluciones
+              digitales innovadoras, inclusivas y sostenibles, capaces de
+              transformar ideas en mejoras que enriquezcan la vida de las
+              personas.
             </p>
           ),
         },
@@ -303,14 +325,19 @@ export const content = {
           text: (
             <p className="text-balance">
               Valoro la{" "}
-              <span className="text-accent font-bold">solidaridad</span> al
-              ayudar a otros, el{" "}
-              <span className="text-accent font-bold">respeto</span> por las
-              ideas de mis colegas, la{" "}
-              <span className="text-accent font-bold">honestidad</span> con
-              ética profesional y la{" "}
-              <span className="text-accent font-bold">gratitud</span> por cada
-              oportunidad de aprendizaje.
+              <span className="text-accent font-bold">Responsabilidad</span>{" "}
+              este valor fortalece la confianza de los equipos y organizaciones
+              con los que colaboro.
+              <span className="text-accent font-bold"> Lealtad</span> actúo con
+              integridad y criterio en cualquier situación para generar
+              relaciones de confianza a largo plazo.
+              <span className="text-accent font-bold">
+                {" "}
+                Proactividad e Ingenio
+              </span>{" "}
+              me destaco por encontrar soluciones creativas incluso en
+              situaciones complejas o con recursos limitados, buscando siempre
+              la mejor forma de aportar valor.
             </p>
           ),
         },
@@ -320,16 +347,22 @@ export const content = {
       title: "Experiencia",
       content: [
         {
-          time: "2021 — Actualidad",
-          title: "Desarrollador Web Full‑stack",
-          subtitle: "Reboot CR — 4thewords.com",
-          text: "Mantenimiento y evolución de una app web comercial: resolución de deuda técnica, nuevas funcionalidades (desde widgets hasta pantallas completas) y corrección de bugs en áreas legacy y modernas. Trabajo en frontend y backend, con algo de DevOps.",
+          time: "Mayo 2024 – Septiembre 2024",
+          title: "Desarrollador Full-Stack",
+          subtitle: "FitStream Solutions",
+          text: "Empresa ficticia creada para el curso Proyecto 2, en la cual diseñamos y desarrollamos una aplicación web para la gestión de centros de acondicionamiento físico. El sistema facilita la administración del negocio y la interacción con los clientes. El proyecto incluyó un levantamiento detallado de requerimientos y documentación formal con casos de uso, simulando un entorno laboral real.",
         },
         {
-          time: "2018",
-          title: "Desarrollador Web Full‑stack",
-          subtitle: "Cubik — LimOn (Proyecto universitario)",
-          text: "Diseño y desarrollo de una app de registro de hoteles y sitios turísticos con reservas. Levantamiento de requerimientos y documentación formal con casos de uso, simulando un entorno laboral real.",
+          time: "Abril 2024 – Actualidad",
+          title: "Desarrollador Full-Stack",
+          subtitle: "Freelancer",
+          text: "Como freelancer, he perfeccionado mi capacidad para gestionar plazos ajustados mientras mantengo una comunicación clara con los clientes. Este rol me permite explorar ideas diversas y aprender de cada proyecto, viendo cómo las visiones creativas se convierten en soluciones funcionales.",
+        },
+        {
+          time: "Enero 2019 – Mayo 2019",
+          title: "Desarrollador Web Full-Stack",
+          subtitle: "Proyecto JAMS",
+          text: "Empresa ficticia creada para el curso Proyecto 1, donde diseñamos y desarrollamos la aplicación web Educational Seeker. Esta plataforma ayuda a los padres a tomar decisiones informadas al seleccionar opciones académicas para sus hijos. El proyecto simuló un entorno profesional real mediante sesiones de requerimientos, documentación formal y diagramas del sistema.",
         },
       ],
     },
@@ -337,33 +370,36 @@ export const content = {
       title: "Educación",
       content: [
         {
-          time: "2021 — Actualidad",
-          title: "Bachillerato en Ingeniería del Software",
+          time: "2020 — 2024",
+          title: "Técnico en Desarrollo de Software",
           subtitle: "Universidad Cenfotec",
+          text: "La Universidad Cenfotec me brindó una sólida formación en desarrollo de software y despertó mi pasión por resolver problemas complejos mediante la programación.",
+        },
+        {
+          time: "2025 — Actualidad",
+          title: "Curso Intensivo de Inglés como Segundo Idioma (ESL)",
+          subtitle: "SKYCTC",
+          text: "Este curso intensivo de ESL está mejorando mi dominio del inglés, enfocándose en gramática avanzada, vocabulario y habilidades conversacionales para apoyar mi crecimiento profesional en la industria tecnológica.",
         },
         {
           time: "2024 — Actualidad",
-          title: "Curso de inglés intensivo",
-          subtitle: "Fundatec — TEC",
-        },
-        {
-          time: "2018 — 2019",
-          title: "Técnico en Ingeniería del Software",
+          title: "Bachillerato en Ingeniería de Software",
           subtitle: "Universidad Cenfotec",
+          text: "Este programa me está ayudando a profundizar mi comprensión sobre arquitectura de software, patrones de diseño y resolución de problemas del mundo real.",
         },
       ],
     },
     contact: {
       title: "Contáctame",
       subtitle:
-        "Puedes contactarme enviando el formulario a continuación; te responderé lo antes posible.",
-      email: "Correo",
+        "No dudes en escribirme usando el formulario a continuación — te responderé lo antes posible.",
+      email: "Correo electrónico",
       subject: "Asunto",
       message: "Mensaje",
       button: "Enviar",
     },
     footer: {
-      slogan: "Visión clara, código claro",
+      slogan: "Copyright 2025. All Rights Reserved Johan Jimenez",
     },
   },
 };
