@@ -84,7 +84,7 @@ export default function Projects({
       ref={containerRef}
       className={`projectsWrapper h-screen md:pl-20 ${className}`}
     >
-      <div className="h-full flex flex-col justify-center gap-8 md:gap-10 px-4 md:px-10">
+      <div className="h-full flex flex-col justify-center gap-8 md:gap-10 px-4 md:px-10 pt-10 md:pt-16 ">
         {/* Título de la sección */}
         <div className="mb-2 md:mb-4">
           <Title text={title} />

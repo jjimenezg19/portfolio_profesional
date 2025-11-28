@@ -49,9 +49,15 @@ export default function Banner({
   return (
     <section
       id={id}
-      className={`relative w-full min-h-screen
-      bg-cover bg-center bg-no-repeat
-      pt-70 md:pt-80 lg:pt-75 min-h-[120vh]${className}`}
+      className={`
+        relative w-full
+        min-h-screen   /* altura completa */
+        flex flex-col items-center justify-center
+        bg-cover bg-center bg-no-repeat
+        px-4
+        pt-[18rem] md:pt-[20rem] lg:pt-[19rem]
+        ${className}
+      `}
       style={{ backgroundImage: `url(${bannerUrl})` }}
     >
       {/* Todo dentro del banner */}
